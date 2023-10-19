@@ -7,9 +7,18 @@
           <div class="card-body">
             
         
-             Author Name: <p><%= author.first_name %> <%= author.last_name %></p>
-              <p></p>
-             Date of Birth: <p><%= author.date_of_birth %></p>
+              <p><%= author.first_name %> <%= author.last_name %></p>
+              <p>Date of Birth:<%= author.date_of_birth %></p>
+
+              <div class="d-flex align-items-center   justify-content-md-center">
+                  <%= link_to 'Show', author_path(author), class: "btn btn-outline-success" %> &nbsp &nbsp
+
+                  <%= link_to 'Edit', edit_author_path(author) , class: "btn btn-outline-info" %>
+
+                   <%= button_to 'Delete', author_path(author),method: :delete, class:"btn btn-outline-danger ms-2" %>
+  
+             </div>
+
               
                    
 
