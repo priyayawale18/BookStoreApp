@@ -1,0 +1,28 @@
+ <div class="container container-margin">
+ 	<h2><center>Add Book</center></h2>
+   <div class="row">
+   		<div class="col-md-4"></div>
+
+   		<div class="col-md-4">
+   		
+   				<div class="card">
+   				   <div class="card-body">
+   				   	 <%= form_with model:@book do |book| %>
+                     	<%= book.label :book_title  %>
+	                  	<%= book.text_field :book_title, class: "form-control",autocomplete: "off" %><br>
+	                    <%= book.submit class: "btn btn-success" %>
+	               <% end %>
+
+   				   </div>
+	              
+   
+               
+   				</div>
+
+
+        </div>
+   		</div>
+
+        <div class="col-md-4"></div>
+   </div>	
+</div>	

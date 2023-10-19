@@ -1,0 +1,27 @@
+<div class="container">
+  <h1 class="text-center mt-4"><u>Edit Book</u></h1>
+  
+ <div class="row">
+   <div class="col-md-3"></div>
+
+   <div class="col-md-6">
+       <div class="card">
+          <div class="card-body">
+            <%= form_with model: @book do |book| %>
+             <div>
+               <%= book.label :book_title %>
+               <%= book.text_field :book_title,class: "form-control"%>
+              </div><br>
+              <div> 
+                <%= book.submit "Book Updated", class: "btn btn-info" %>
+                <%= link_to ' Cancel & Return to Book list', books_path, class: "btn btn-danger" %>
+              </div>  
+            <% end %>
+          </div>
+       </div>
+   </div>
+
+   <div class="col-md-3"></div>
+ </div>
+
+</div>
