@@ -1,5 +1,6 @@
 <div class="container container-margin">
   <h2><center>Author Listing</center></h2>
+   <%= link_to "Create Author",new_author_path,class: "btn btn-success" %>
  <% @author.each do |author| %>
     <div class="row justify-content-md-center">
       <div class="col-4 mt-4">

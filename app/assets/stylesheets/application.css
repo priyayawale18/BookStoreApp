@@ -1,3 +1,13 @@
 .container-margin{
 	margin-top:50px;
 }
+#home_page_image{
+
+	background-image: url("image2.avif");
+	background-repeat: no-repeat;
+	height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border-radius:6px;
+}

@@ -11,6 +11,9 @@
 		  	 	  <p>Author Name: <%= @author.first_name %><%= @author.last_name %></p>
 		  	 	  <p>Date Of Birthday: <%= @author.date_of_birth %></p>
 
+		  	 	  <%= link_to 'Edit', edit_author_path(@author) , class: "btn btn-outline-info" %> &nbsp
+              	  <%= link_to ' Cancel & Return to Author list', authors_path, class: "btn btn-outline-danger" %>
+
                 </div><br>
                 <div>
               		

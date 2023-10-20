@@ -10,9 +10,16 @@
    				   	 <%= form_with model:@book do |book| %>
                      	<%= book.label :book_title  %>
 	                  	<%= book.text_field :book_title, class: "form-control",autocomplete: "off" %><br>
+	                  	<div>
+	               	      <%= book.label :Authors %><br>
+                        <%= book.collection_select(:author_ids, Author.all, :id, :first_name,
+                        { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, class: "custom-select form-control" }) %><br>
+	                    </div>
 	                    <%= book.submit class: "btn btn-success" %>
-	               <% end %>
+	              
 
+	               
+                <% end %>
    				   </div>
 	              
    

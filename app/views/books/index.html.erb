@@ -1,5 +1,6 @@
 <div class="container container-margin">
 	<h2><center>Book Listing</center></h2>
+  <%= link_to "Create Book",new_book_path,class: "btn btn-success" %>
  <% @book.each do |book| %>
     <div class="row justify-content-md-center">
       <div class="col-4 mt-4">
@@ -8,7 +9,13 @@
             
         
               <p><%= book.book_title %></p>
-              
+
+              <div >
+               <% if book.authors.any? %>
+                      <div class="mt-2"><%= render book.authors %></div> 
+                  <% end %>
+             </div>
+              <br>
               <div class="d-flex align-items-center justify-content-md-center">
               	<%= link_to 'Show', book_path(book), class: "btn btn-outline-success" %> &nbsp &nbsp
 

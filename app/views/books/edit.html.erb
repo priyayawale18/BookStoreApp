@@ -12,6 +12,11 @@
                <%= book.label :book_title %>
                <%= book.text_field :book_title,class: "form-control"%>
               </div><br>
+              <div>
+                        <%= book.label :Authors %><br>
+                        <%= book.collection_select(:author_ids, Author.all, :id, :first_name,
+                        { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, class: "custom-select form-control" }) %><br>
+                      </div>
               <div> 
                 <%= book.submit "Book Updated", class: "btn btn-info" %>
                 <%= link_to ' Cancel & Return to Book list', books_path, class: "btn btn-danger" %>
