@@ -9,10 +9,18 @@
 		  	 <div class="card-body">
 		  	 	<div>
 		  	 	  Book Name: <%= @book.book_title %><br>	
+                </div>
+                <div >
+                <p>Authors Name:
+                  <% if @book.authors.any? %>
+                      <div class="mt-2"><%= render @book.authors %>
+                      </div> 
+                  <% end %>
+                 </p> 
                 </div><br>
                 <div>
               		<%= link_to 'Edit', edit_book_path(@book) , class: "btn btn-outline-info" %> &nbsp
-              		<%= link_to ' Cancel & Return to Book list', books_path, class: "btn btn-danger" %>
+              		<%= link_to ' Cancel & Return to Book list', books_path, class: "btn btn-outline-danger" %>
 
               		
               	</div>	
