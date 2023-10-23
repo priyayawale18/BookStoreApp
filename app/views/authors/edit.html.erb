@@ -21,11 +21,7 @@
                          <%= author.label :date_of_birth  %>
                          <%= author.date_field :date_of_birth, class: "form-control",autocomplete: "off" %><br>
                       </div>
-                      <div>
-                        <%= author.label :Books %><br>
-                        <%= author.collection_select(:book_ids, Book.all, :id, :book_title,
-                        { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, class: "custom-select form-control" }) %><br>
-                      </div>
+                      
                       <br>
 
                       <%= author.submit class: "btn btn-success" %>
